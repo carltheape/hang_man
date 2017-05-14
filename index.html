@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<div class="container">
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- 	<script src="assets/js/game.js"></script>  -->  
+	<meta charset="UTF-8">
+	<title>Hang Loose!</title>
+</head>
+<body class="dye">
+
+<div class="text-center full">
+	    <h1>CLASSIC ROCK HANGMAN!</h1>
+	<div class="row">
+		<div class="col-xs-12 full text-center">
+		<h2 id="lives"></h2><h3>Guesses Left</h3>
+			<h2 id="blanks"></h2>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>	
+	<div class="row">
+		<div class="col-xs-12">
+			<h2><p id="pickedLetters"></p></h2>
+		</div>
+	</div>
+</div>
+</body>
+<footer>
+</footer>
+	<div class="row">
+	<div class="col-xs-4 col-xs-offset-4 text-center">
+	<button id="startButton" class="button btn btn-primary btn-lg" onclick="difficulty()">Play</button>
+	<button id="easyButton" class="button btn btn-primary btn-lg" onclick="easy(); start()">Easy (10)</button>
+	<button id="medButton" class="button btn btn-primary btn-lg" onclick="med(); start()">Medium (7)</button>
+	<button id="hardButton" class="button btn btn-primary btn-lg" onclick="hard(); start()">Hard (4)</button>
+	</div>
+	</div>
+ 
+<button id="toggle" class="button btn btn-danger btn-lg" value="Toggle Background">Toggle Background</button>
+	</div>
+		<script src="assets/js/game.js"></script>  
+</html>
