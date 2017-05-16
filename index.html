@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html>
 <div class="container">
+
+
 <head>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<!-- 	<script src="assets/js/game.js"></script>  -->  
-	<meta charset="UTF-8">
-	<title>Hang Loose!</title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+	<meta charset="UTF-8">		
+	<script src="assets/js/game.js"></script>
+
+</script>
+	<title>HANG-MAN ROCKS!</title>
+
 </head>
 <body class="dye">
 
 <div class="text-center full">
-	    <h1>CLASSIC ROCK HANGMAN!</h1>
+	    <h1 id="title">CLASSIC ROCK HANGMAN!</h1>
+
 	<div class="row">
-		<div class="col-xs-12 full text-center">
-		<h2 id="lives"></h2><h3>Guesses Left</h3>
+		<div class="col-xs-2">
+			<div class="floatLeft">
+      			<img class="music" src="assets/images/bell.jpg" />
+      			<img class="music" src="assets/images/rocker.jpg" />
+      			<img class="music" src="assets/images/stones.png" />
+			</div>
+		</div>
+		<div class="col-xs-8 full text-center"><h2 id="lives"></h2><h3 id="guess">Guesses Left</h3>
 			<h2 id="blanks"></h2>
+			<br>
+			<h3><p id="pickedLetters"></p></h3>
+			<button id="startButton" class="button btn btn-primary btn-lg" onclick="difficulty()">Play</button>
+			<button id="easyButton" class="button btn btn-primary btn-lg" onclick="easy(); start()">Easy (10)</button>
+			<button id="medButton" class="button btn btn-primary btn-lg" onclick="med(); start()">Medium (7)</button>
+			<button id="hardButton" class="button btn btn-primary btn-lg" onclick="hard(); start()">Hard (4)</button>
+			</div>
+		<div class="col-xs-2">
+			<div class="floatRight">
+				<img class="music" src="assets/images/dead.jpg" />
+			    <img class="music" src="assets/images/bold.jpg" />
+      			<img class="music" src="assets/images/doors.jpg" />
+			</div>
+		</div>
+
 		</div>
 	</div>
 	<br>
 	<br>
 	<br>	
-	<div class="row">
-		<div class="col-xs-12">
-			<h2><p id="pickedLetters"></p></h2>
+<!-- 	<div class="row">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-10">
 		</div>
-	</div>
+		<div class="col-xs-2"></div>
+	</div> -->
 </div>
+
 </body>
+
 <footer>
-</footer>
-	<div class="row">
-	<div class="col-xs-4 col-xs-offset-4 text-center">
-	<button id="startButton" class="button btn btn-primary btn-lg" onclick="difficulty()">Play</button>
-	<button id="easyButton" class="button btn btn-primary btn-lg" onclick="easy(); start()">Easy (10)</button>
-	<button id="medButton" class="button btn btn-primary btn-lg" onclick="med(); start()">Medium (7)</button>
-	<button id="hardButton" class="button btn btn-primary btn-lg" onclick="hard(); start()">Hard (4)</button>
-	</div>
-	</div>
  
 <button id="toggle" class="button btn btn-danger btn-lg" value="Toggle Background">Toggle Background</button>
 	</div>
-		<script src="assets/js/game.js"></script>  
+	
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4 full text-center container">
+			<div class="col-xs-6"><h3>WINS</h3><p id="win">0</p></div>
+			<div class="col-xs-6"><h3>LOSSES</h3><p id="lose">0</p></div>
+		<div class="col-xs-4"></div>
+
+		</div>
+	</div>
+	</div>
+	</div>
+	</footer>
+		<script src="assets/js/game.js"></script>
+
+
+
 </html>
